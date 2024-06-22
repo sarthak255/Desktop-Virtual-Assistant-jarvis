@@ -1,6 +1,8 @@
 # Advanced Desktop Virtual Assistant
 
 ![image](https://github.com/sarthak255/Desktop-Virtual-Assistant-jarvis/assets/59481936/7ff447c3-67ca-468d-8528-31231ed47268)
+![image](https://github.com/sarthak255/Desktop-Virtual-Assistant-jarvis/assets/59481936/934e79cc-9c42-41ce-ad28-b982ba69636a)
+
 
 ## Overview
 The Advanced Desktop Virtual Assistant is a Python-based application designed to provide a sophisticated and interactive user experience directly from the desktop environment. It leverages advanced natural language processing and machine learning techniques to offer intelligent automation and personalized assistance.
