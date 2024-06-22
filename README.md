@@ -35,9 +35,6 @@ If you want to contribute to the development of the Advanced Desktop Virtual Ass
 4. Test thoroughly and ensure compatibility across different platforms.
 5. Submit a pull request with a detailed description of your changes.
 
-## License
-This project is licensed under the [MIT License](LICENSE.md).
-
 ## Contact
 For questions, support, or collaboration opportunities, please contact the project maintainers:
 - [Developer Name](mailto:sarthakgoel62@gmail.com)
