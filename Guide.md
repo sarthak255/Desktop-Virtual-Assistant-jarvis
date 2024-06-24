@@ -93,6 +93,14 @@ JARVIS is a virtual assistant that can perform a wide range of tasks using your 
   - Usage: `improve programming [language] with content [content]`
   - Example: `improve programming python with content def foo(): pass`
 
+- **Create Program for Developer Boards**: Creates a program for a specified developer board.
+  - Usage: `create program for [board] to [task]`
+  - Example: `create program for Arduino to blink an LED`
+
+- **Create Script for Developer Boards and Rubber Ducky**: Creates a script for a specified developer board.
+  - Usage: `create script for [board] to [task]`
+  - Example: `create script for Raspberry Pi to control GPIO pins`
+
 ### Image Search
 - **Image Search**: Performs an image search for the specified query.
   - Usage: `image search [query]`
