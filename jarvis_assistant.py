@@ -34,6 +34,7 @@ import cv2
 import numpy as np
 import torch
 import openai
+import mediapipe as mp
 
 # Initialize OpenAI API
 openai.api_key = 'your_openai_api_key'
@@ -43,6 +44,11 @@ recognizer = sr.Recognizer()
 engine = pyttsx3.init()
 nlp = spacy.load("en_core_web_sm")
 translator = Translator()
+
+# Initialize MediaPipe
+mp_hands = mp.solutions.hands
+mp_face_detection = mp.solutions.face_detection
+mp_drawing = mp.solutions.drawing_utils
 
 
 # Load preferences for personalization
@@ -103,6 +109,16 @@ def create_program(board, task):
     response = openai.Completion.create(
         model="text-davinci-003",
         prompt=f"Create a program for {board} to {task}",
+        max_tokens=150
+    )
+    return response.choices[0].text.strip()
+
+
+# Function to create scripts for developer boards and Rubber Ducky
+def create_script(board, task):
+    response = openai.Completion.create(
+        model="text-davinci-003",
+        prompt=f"Create a script for {board} to {task}",
         max_tokens=150
     )
     return response.choices[0].text.strip()
@@ -434,16 +450,6 @@ def fix_system_errors():
     speak("System errors fixed.")
 
 
-# Function to create scripts for developer boards
-def create_script(board, task):
-    response = openai.Completion.create(
-        model="text-davinci-003",
-        prompt=f"Create a script for {board} to {task}",
-        max_tokens=150
-    )
-    return response.choices[0].text.strip()
-
-
 # Function to handle voice lock system
 def lock_system():
     speak("Please say 'wakeup' to unlock the system.")
@@ -490,6 +496,41 @@ def listen_for_jarvis():
                         execute_command(command)
             except sr.UnknownValueError:
                 continue
+
+
+# Function to scan and analyze facial and hand expressions
+def analyze_expressions():
+    cap = cv2.VideoCapture(0)
+    with mp_hands.Hands(min_detection_confidence=0.5, min_tracking_confidence=0.5) as hands, \
+            mp_face_detection.FaceDetection(min_detection_confidence=0.5) as face_detection:
+        while cap.isOpened():
+            ret, frame = cap.read()
+            if not ret:
+                continue
+
+            image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+            image.flags.writeable = False
+
+            # Detect faces
+            face_results = face_detection.process(image)
+            if face_results.detections:
+                for detection in face_results.detections:
+                    mp_drawing.draw_detection(frame, detection)
+                    # Analyze facial expressions and perform tasks based on the result
+
+            # Detect hands
+            hand_results = hands.process(image)
+            if hand_results.multi_hand_landmarks:
+                for hand_landmarks in hand_results.multi_hand_landmarks:
+                    mp_drawing.draw_landmarks(frame, hand_landmarks, mp_hands.HAND_CONNECTIONS)
+                    # Analyze hand expressions and perform tasks based on the result
+
+            cv2.imshow('JARVIS - Facial and Hand Expression Analysis', frame)
+            if cv2.waitKey(5) & 0xFF == 27:
+                break
+
+    cap.release()
+    cv2.destroyAllWindows()
 
 
 # Command execution function
@@ -637,6 +678,8 @@ def execute_command(command):
         task = parts[1].strip()
         script = create_script(board, task)
         speak(f"Here's a script for {board} to {task}: {script}")
+    elif "analyze expressions" in command:
+        analyze_expressions()
     else:
         speak(response)
 
