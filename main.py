@@ -65,6 +65,7 @@ def save_preferences(preferences):
 # Function to recognize speech
 def recognize_speech():
     with sr.Microphone() as source:
+        recognizer.adjust_for_ambient_noise(source)
         print("Listening...")
         audio = recognizer.listen(source)
         try:
@@ -92,6 +93,16 @@ def process_command(command):
     response = openai.Completion.create(
         model="text-davinci-003",
         prompt=f"User command: {command}\nAssistant response:",
+        max_tokens=150
+    )
+    return response.choices[0].text.strip()
+
+
+# Function to create programs for developer boards
+def create_program(board, task):
+    response = openai.Completion.create(
+        model="text-davinci-003",
+        prompt=f"Create a program for {board} to {task}",
         max_tokens=150
     )
     return response.choices[0].text.strip()
@@ -423,6 +434,64 @@ def fix_system_errors():
     speak("System errors fixed.")
 
 
+# Function to create scripts for developer boards
+def create_script(board, task):
+    response = openai.Completion.create(
+        model="text-davinci-003",
+        prompt=f"Create a script for {board} to {task}",
+        max_tokens=150
+    )
+    return response.choices[0].text.strip()
+
+
+# Function to handle voice lock system
+def lock_system():
+    speak("Please say 'wakeup' to unlock the system.")
+    voice_activation()
+    while True:
+        speak("Please say the password.")
+        password = recognize_speech()
+        if password and "open sesame" in password.lower():
+            speak("System unlocked.")
+            break
+        else:
+            speak("Incorrect password. Try again.")
+
+
+# Function for voice activation
+def voice_activation():
+    while True:
+        with sr.Microphone() as source:
+            recognizer.adjust_for_ambient_noise(source)
+            print("Say 'wakeup' to activate the assistant...")
+            audio = recognizer.listen(source)
+            try:
+                text = recognizer.recognize_google(audio)
+                if "wakeup" in text.lower():
+                    greet_user()
+                    speak("I am awake. How can I help you?")
+                    break
+            except sr.UnknownValueError:
+                continue
+
+
+# Function to listen for "Jarvis" to enter listening mode
+def listen_for_jarvis():
+    while True:
+        with sr.Microphone() as source:
+            recognizer.adjust_for_ambient_noise(source)
+            audio = recognizer.listen(source)
+            try:
+                text = recognizer.recognize_google(audio)
+                if "jarvis" in text.lower():
+                    speak("Listening...")
+                    command = recognize_speech()
+                    if command:
+                        execute_command(command)
+            except sr.UnknownValueError:
+                continue
+
+
 # Command execution function
 def execute_command(command):
     response = process_command(command)
@@ -556,6 +625,18 @@ def execute_command(command):
         edit_file(filepath, content)
     elif "greet me" in command:
         greet_user()
+    elif "create program for" in command:
+        parts = command.replace("create program for", "").strip().split(" to ")
+        board = parts[0].strip()
+        task = parts[1].strip()
+        program = create_program(board, task)
+        speak(f"Here's a program for {board} to {task}: {program}")
+    elif "create script for" in command:
+        parts = command.replace("create script for", "").strip().split(" to ")
+        board = parts[0].strip()
+        task = parts[1].strip()
+        script = create_script(board, task)
+        speak(f"Here's a script for {board} to {task}: {script}")
     else:
         speak(response)
 
@@ -582,10 +663,9 @@ def create_gui():
     entry.bind("<Return>", on_enter)
 
     def listen():
+        lock_system()
         while True:
-            command = recognize_speech()
-            if command:
-                execute_command(command)
+            listen_for_jarvis()
 
     # Start voice recognition in a separate thread
     threading.Thread(target=listen, daemon=True).start()
