@@ -50,7 +50,6 @@ mp_hands = mp.solutions.hands
 mp_face_detection = mp.solutions.face_detection
 mp_drawing = mp.solutions.drawing_utils
 
-
 # Load preferences for personalization
 def load_preferences():
     try:
@@ -59,14 +58,11 @@ def load_preferences():
     except FileNotFoundError:
         return {}
 
-
 preferences = load_preferences()
-
 
 def save_preferences(preferences):
     with open("preferences.pkl", "wb") as f:
         pickle.dump(preferences, f)
-
 
 # Function to recognize speech
 def recognize_speech():
@@ -87,12 +83,10 @@ def recognize_speech():
             speak("Sorry, my speech service is down.")
             return None
 
-
 # Function to synthesize speech
 def speak(text):
     engine.say(text)
     engine.runAndWait()
-
 
 # Function to process commands using ChatGPT
 def process_command(command):
@@ -103,7 +97,6 @@ def process_command(command):
     )
     return response.choices[0].text.strip()
 
-
 # Function to create programs for developer boards
 def create_program(board, task):
     response = openai.Completion.create(
@@ -112,7 +105,6 @@ def create_program(board, task):
         max_tokens=150
     )
     return response.choices[0].text.strip()
-
 
 # Function to create scripts for developer boards and Rubber Ducky
 def create_script(board, task):
@@ -123,12 +115,10 @@ def create_script(board, task):
     )
     return response.choices[0].text.strip()
 
-
 # Task automation functions
 def search_web(query):
     url = f"https://www.google.com/search?q={query}"
     webbrowser.open(url)
-
 
 def check_weather(location):
     api_key = "your_openweather_api_key"
@@ -141,12 +131,10 @@ def check_weather(location):
     else:
         speak("Sorry, I couldn't fetch the weather details.")
 
-
 def get_time():
     now = datetime.datetime.now()
     current_time = now.strftime("%H:%M")
     speak(f"The current time is {current_time}.")
-
 
 def send_email(recipient, subject, body):
     sender = "your_email@example.com"
@@ -160,7 +148,6 @@ def send_email(recipient, subject, body):
     with smtplib.SMTP_SSL("smtp.example.com", 465) as server:
         server.login(sender, password)
         server.sendmail(sender, recipient, msg.as_string())
-
 
 def control_media(action):
     player = vlc.MediaPlayer("path_to_media_file")
@@ -185,13 +172,11 @@ def control_media(action):
     elif action == "rewind":
         player.set_time(player.get_time() - 10000)
 
-
 def control_brightness(action):
     if action == "increase brightness":
         pyautogui.press("brightnessup")
     elif action == "decrease brightness":
         pyautogui.press("brightnessdown")
-
 
 def check_social_media(platform):
     if platform == "twitter":
@@ -201,7 +186,6 @@ def check_social_media(platform):
     elif platform == "instagram":
         webbrowser.open("https://instagram.com")
 
-
 def open_software(name):
     if name.lower() == "notepad":
         os.system("notepad.exe")
@@ -210,19 +194,16 @@ def open_software(name):
     elif name.lower() == "browser":
         webbrowser.open("http://www.google.com")
 
-
 def close_software(name):
     if name.lower() == "notepad":
         os.system("taskkill /im notepad.exe /f")
     elif name.lower() == "calculator":
         os.system("taskkill /im calc.exe /f")
 
-
 def take_screenshot(name, location):
     screenshot = pyautogui.screenshot()
     screenshot.save(os.path.join(location, f"{name}.png"))
     speak("Screenshot taken and saved.")
-
 
 def record_audio(filename, duration):
     fs = 44100  # Sample rate
@@ -233,12 +214,10 @@ def record_audio(filename, duration):
     wavio.write(filename, myrecording, fs, sampwidth=2)
     speak("Audio recording saved.")
 
-
 def record_video(filename, duration):
     command = f"ffmpeg -t {duration} -f gdigrab -framerate 30 -i desktop {filename}"
     subprocess.call(command, shell=True)
     speak("Video recording saved.")
-
 
 def search_file(filename):
     for root, dirs, files in os.walk("C:\\"):
@@ -248,7 +227,6 @@ def search_file(filename):
             return file_path
     speak("File not found.")
     return None
-
 
 def create_document(doc_type, content):
     if doc_type == "word":
@@ -267,7 +245,6 @@ def create_document(doc_type, content):
     elif doc_type == "presentation":
         speak("Creating presentations is not supported yet.")
 
-
 def improve_programming_language(language, content):
     if language == "python":
         # Example: Using PEP8 guidelines to format code
@@ -276,13 +253,11 @@ def improve_programming_language(language, content):
             f.write(formatted_content)
         speak("Python code improved.")
 
-
 def image_search(query):
     urls = list(google_search(query, num_results=5))
     for url in urls:
         webbrowser.open(url)
     speak("Here are the top image search results.")
-
 
 def voice_typing():
     while True:
@@ -290,18 +265,14 @@ def voice_typing():
         if command:
             pyautogui.write(command)
 
-
 def switch_tabs():
     pyautogui.hotkey('ctrl', 'tab')
-
 
 def minimize_all_tabs():
     pyautogui.hotkey('win', 'm')
 
-
 def maximize_all_tabs():
     pyautogui.hotkey('win', 'shift', 'm')
-
 
 def generate_image_from_text(text):
     url = "https://api.dallemini.ai/generate"  # Hypothetical DALL-E mini API endpoint
@@ -310,7 +281,6 @@ def generate_image_from_text(text):
     webbrowser.open(image_url)
     speak("Image generated from text.")
 
-
 def scan_for_viruses():
     if os.name == "nt":  # Windows
         os.system("start ms-settings:windowsdefender")
@@ -318,12 +288,10 @@ def scan_for_viruses():
         os.system("clamscan -r /")
     speak("Scanning for viruses.")
 
-
 def translate_text(text, dest_lang):
     translation = translator.translate(text, dest=dest_lang)
     speak(f"Translation: {translation.text}")
     return translation.text
-
 
 def translate_speech(dest_lang):
     text = recognize_speech()
@@ -334,18 +302,15 @@ def translate_speech(dest_lang):
         os.system("mpg321 translated_speech.mp3")
         speak(f"Translation: {translation.text}")
 
-
 def read_file(filepath):
     with open(filepath, "r") as f:
         content = f.read()
     speak(content)
 
-
 def edit_file(filepath, content):
     with open(filepath, "w") as f:
         f.write(content)
     speak("File edited.")
-
 
 def greet_user():
     now = datetime.datetime.now()
@@ -358,7 +323,6 @@ def greet_user():
         greet = "Good evening!"
     speak(greet)
 
-
 # Telegram functions
 api_id = 'your_telegram_api_id'
 api_hash = 'your_telegram_api_hash'
@@ -366,23 +330,20 @@ phone = 'your_phone_number'
 
 telegram_client = TelegramClient('session_name', api_id, api_hash)
 
-
 async def telegram_send_message(recipient, message):
     await telegram_client.start(phone)
     await telegram_client.send_message(recipient, message)
     await telegram_client.disconnect()
 
-
 def send_telegram_message(recipient, message):
     with telegram_client:
         telegram_client.loop.run_until_complete(telegram_send_message(recipient, message))
-
 
 # Discord functions
 class DiscordClient(discord.Client):
     async def on_ready(self):
         print(f'We have logged in as {self.user}')
-
+    
     async def send_message(self, channel_name, message):
         for guild in self.guilds:
             for channel in guild.text_channels:
@@ -390,14 +351,11 @@ class DiscordClient(discord.Client):
                     await channel.send(message)
                     return
 
-
 discord_client = DiscordClient()
-
 
 def send_discord_message(token, channel_name, message):
     discord_client.run(token)
     asyncio.run(discord_client.send_message(channel_name, message))
-
 
 # YouTube functions
 def download_youtube_video(url):
@@ -405,10 +363,8 @@ def download_youtube_video(url):
     yt.streams.first().download()
     speak("YouTube video downloaded.")
 
-
 # Facebook and Instagram functions
 driver = webdriver.Chrome()
-
 
 def login_facebook(username, password):
     driver.get("https://www.facebook.com")
@@ -419,7 +375,6 @@ def login_facebook(username, password):
     pass_input.send_keys(Keys.RETURN)
     speak("Logged into Facebook.")
 
-
 def login_instagram(username, password):
     driver.get("https://www.instagram.com")
     user_input = driver.find_element_by_name("username")
@@ -429,17 +384,14 @@ def login_instagram(username, password):
     pass_input.send_keys(Keys.RETURN)
     speak("Logged into Instagram.")
 
-
 # Virtual machine management
 def start_virtual_machine(vm_name):
     os.system(f"virsh start {vm_name}")
     speak(f"Started virtual machine {vm_name}")
 
-
 def stop_virtual_machine(vm_name):
     os.system(f"virsh shutdown {vm_name}")
     speak(f"Stopped virtual machine {vm_name}")
-
 
 # Fixing system errors
 def fix_system_errors():
@@ -448,7 +400,6 @@ def fix_system_errors():
     elif os.name == "posix":  # Linux/Mac
         os.system("sudo apt-get update && sudo apt-get upgrade")
     speak("System errors fixed.")
-
 
 # Function to handle voice lock system
 def lock_system():
@@ -462,7 +413,6 @@ def lock_system():
             break
         else:
             speak("Incorrect password. Try again.")
-
 
 # Function for voice activation
 def voice_activation():
@@ -480,7 +430,6 @@ def voice_activation():
             except sr.UnknownValueError:
                 continue
 
-
 # Function to listen for "Jarvis" to enter listening mode
 def listen_for_jarvis():
     while True:
@@ -497,12 +446,11 @@ def listen_for_jarvis():
             except sr.UnknownValueError:
                 continue
 
-
 # Function to scan and analyze facial and hand expressions
 def analyze_expressions():
     cap = cv2.VideoCapture(0)
     with mp_hands.Hands(min_detection_confidence=0.5, min_tracking_confidence=0.5) as hands, \
-            mp_face_detection.FaceDetection(min_detection_confidence=0.5) as face_detection:
+         mp_face_detection.FaceDetection(min_detection_confidence=0.5) as face_detection:
         while cap.isOpened():
             ret, frame = cap.read()
             if not ret:
@@ -532,6 +480,17 @@ def analyze_expressions():
     cap.release()
     cv2.destroyAllWindows()
 
+# Function to have random conversations using ChatGPT
+def random_talk():
+    while True:
+        command = recognize_speech()
+        if command:
+            response = openai.Completion.create(
+                model="text-davinci-003",
+                prompt=f"User: {command}\nAssistant:",
+                max_tokens=150
+            )
+            speak(response.choices[0].text.strip())
 
 # Command execution function
 def execute_command(command):
@@ -683,7 +642,6 @@ def execute_command(command):
     else:
         speak(response)
 
-
 # GUI setup
 def create_gui():
     root = tk.Tk()
@@ -712,9 +670,10 @@ def create_gui():
 
     # Start voice recognition in a separate thread
     threading.Thread(target=listen, daemon=True).start()
+    # Start random talk in a separate thread
+    threading.Thread(target=random_talk, daemon=True).start()
 
     root.mainloop()
-
 
 if __name__ == "__main__":
     create_gui()
