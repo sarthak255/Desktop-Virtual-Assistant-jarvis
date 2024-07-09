@@ -1,6 +1,6 @@
 # JARVIS Desktop Virtual Assistant
 
-![image](https://github.com/sarthak255/Desktop-Virtual-Assistant-jarvis/assets/59481936/934e79cc-9c42-41ce-ad28-b982ba69636a)
+#![image](https://github.com/sarthak255/Desktop-Virtual-Assistant-jarvis/assets/59481936/934e79cc-9c42-41ce-ad28-b982ba69636a)
 ![giphy](https://github.com/sarthak255/Desktop-Virtual-Assistant-jarvis/assets/59481936/58f39051-f603-4e1c-88d0-81741ff30f8a)
 
 
