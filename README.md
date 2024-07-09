@@ -5,6 +5,18 @@
 
 ## Overview
 JARVIS is a full-fledged desktop virtual assistant designed to operate on Windows, Linux, and MacOS. It offers a variety of features including voice command, media control, file management, GPS tracking, task management, weather forecasting, and more.
+Jarvis is a sophisticated desktop virtual assistant designed to streamline your workflow and enhance productivity. Built with advanced natural language processing and artificial intelligence, Jarvis offers a range of features including task management, scheduling, web browsing, and real-time information retrieval. Seamlessly integrate Jarvis into your daily routine for a more organized and efficient work environment.
+
+Key Features:
+
+Task Management: Create, track, and manage tasks effortlessly.
+Scheduling: Set reminders, manage calendars, and get notifications.
+Web Interaction: Browse the internet, search for information, and interact with web-based applications.
+Real-Time Updates: Get live updates on weather, news, and more.
+Jarvis is open-source and highly customizable, making it an ideal solution for users looking to enhance their desktop experience with a powerful virtual assistant.
+
+Installation & Usage:
+Follow the installation guide to get started and explore the documentation for detailed usage instructions.
 
 ## Features
 - Voice Command System
