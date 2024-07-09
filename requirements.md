@@ -31,6 +31,13 @@ This document outlines the software, hardware, and package requirements for the 
 - **Document Creation**: `python-docx`
 - **Web Automation**: `selenium`
 
+### Additional Libraries for New Features
+- **NLP for User Expression Analysis**: `transformers`, `torch`
+- **Developer Board Programming**: `pyserial`, `arduino-python`
+- **Telephony and SMS**: `twilio`
+- **Integrated Chatbot**: `chatterbot`
+- **API Key Management**: `beautifulsoup4`, `mechanize`
+
 ## Hardware Requirements
 ### Minimum Requirements
 - **CPU**: Dual-core processor
@@ -47,7 +54,7 @@ This document outlines the software, hardware, and package requirements for the 
 ## Installation Instructions
 1. **Clone the Repository**
     ```bash
-    git clone https://github.com/sarthak255/Desktop-Virtual-Assistant-jarvis.git
+    git clone https://github.com/your-repo/JARVIS_Assistant.git
     cd JARVIS_Assistant
     ```
 
@@ -61,9 +68,15 @@ This document outlines the software, hardware, and package requirements for the 
     python src/main.py
     ```
 
-## Additional Notes
-- Ensure you have a stable internet connection for features that require online access, such as GPS, weather forecasting, and web searches.
-- For facial recognition and motion detection, ensure your webcam is properly configured and accessible by the system.
+## Usage
+Activate the assistant and use voice commands to interact with various features.
+
+## Additional Features
+1. **NLP for User Expression Analysis**: JARVIS has a high level of NLP to understand user expressions and react accordingly.
+2. **Developer Board Programming**: JARVIS can help program different developer boards (Arduino, USB, etc.) and languages (C, C++, Java, HTML, Python, React, Node.js, Kotlin, etc.).
+3. **Telephony and SMS**: JARVIS can make phone calls, receive/reject calls, make conference calls, send/read SMS, and handle video calls.
+4. **Integrated Chatbot**: JARVIS includes an integrated chatbot for communication.
+5. **API Key Management**: JARVIS can generate API keys for multiple platforms and search the internet for API keys if needed.
 
 ## Environment Variables
 - **OpenAI API Key**: Set your OpenAI API key as an environment variable.
@@ -84,4 +97,4 @@ This document outlines the software, hardware, and package requirements for the 
   **Solution**: Check for any errors in the console and refer to the specific module documentation for troubleshooting steps.
 
 ## Contact
-For further assistance, please contact the project maintainers at `sarthakgoel62@gmail.com`.
+For further assistance, please contact the project maintainers at `sarthakgoel62@gmail.com`or `yush2004@gmail.com`.
