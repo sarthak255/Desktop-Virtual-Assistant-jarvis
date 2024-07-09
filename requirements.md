@@ -47,7 +47,7 @@ This document outlines the software, hardware, and package requirements for the 
 ## Installation Instructions
 1. **Clone the Repository**
     ```bash
-    git clone https://github.com/your-repo/JARVIS_Assistant.git
+    git clone https://github.com/sarthak255/Desktop-Virtual-Assistant-jarvis.git
     cd JARVIS_Assistant
     ```
 
@@ -84,4 +84,4 @@ This document outlines the software, hardware, and package requirements for the 
   **Solution**: Check for any errors in the console and refer to the specific module documentation for troubleshooting steps.
 
 ## Contact
-For further assistance, please contact the project maintainers at `support@jarvisassistant.com`.
+For further assistance, please contact the project maintainers at `sarthakgoel62@gmail.com`.
