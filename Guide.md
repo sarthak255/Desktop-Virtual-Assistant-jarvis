@@ -1,8 +1,5 @@
 # JARVIS Desktop Virtual Assistant - User Guide
 
-![Uploading 8FLR.gif…]()
-
-
 ## Table of Contents
 1. [Voice Command System](#voice-command-system)
 2. [Media Control](#media-control)
