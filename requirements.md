@@ -30,13 +30,12 @@ This document outlines the software, hardware, and package requirements for the 
 - **Hand and Face Analysis**: `mediapipe`, `dlib`
 - **Document Creation**: `python-docx`
 - **Web Automation**: `selenium`
-
-### Additional Libraries for New Features
 - **NLP for User Expression Analysis**: `transformers`, `torch`
 - **Developer Board Programming**: `pyserial`, `arduino-python`
 - **Telephony and SMS**: `twilio`
 - **Integrated Chatbot**: `chatterbot`
 - **API Key Management**: `beautifulsoup4`, `mechanize`
+- **Task Scheduling**: `schedule`
 
 ## Hardware Requirements
 ### Minimum Requirements
@@ -77,6 +76,8 @@ Activate the assistant and use voice commands to interact with various features.
 3. **Telephony and SMS**: JARVIS can make phone calls, receive/reject calls, make conference calls, send/read SMS, and handle video calls.
 4. **Integrated Chatbot**: JARVIS includes an integrated chatbot for communication.
 5. **API Key Management**: JARVIS can generate API keys for multiple platforms and search the internet for API keys if needed.
+6. **Automatic Greeting**: JARVIS greets the user based on the time of day.
+7. **Task Scheduling**: JARVIS can create and edit schedules for performing tasks.
 
 ## Environment Variables
 - **OpenAI API Key**: Set your OpenAI API key as an environment variable.
@@ -97,4 +98,4 @@ Activate the assistant and use voice commands to interact with various features.
   **Solution**: Check for any errors in the console and refer to the specific module documentation for troubleshooting steps.
 
 ## Contact
-For further assistance, please contact the project maintainers at `sarthakgoel62@gmail.com` or `yush2004@gmail.com`.
+For further assistance, please contact the project maintainers at `sarthakgoel62@gmail.com` or `yushgoel2004@gmail.com` .
