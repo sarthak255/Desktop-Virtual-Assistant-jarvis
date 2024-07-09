@@ -26,11 +26,41 @@ JARVIS is a full-fledged desktop virtual assistant designed to operate on Window
 - Facial and Hand Expression Analysis
 - Problem Fixer (Windows, Linux, MacOS)
 - 3D Models/Structures and Document Creation
+- **NLP for User Expression Analysis**
+- **Developer Board Programming**: Program different developer boards (Arduino, USB, etc.) and languages (C, C++, Java, HTML, Python, React, Node.js, Kotlin, etc.).
+- **Telephony and SMS**: Make phone calls, receive/reject calls, make conference calls, send/read SMS, and handle video calls.
+- **Integrated Chatbot**: Communicate with an integrated chatbot.
+- **API Key Management**: Generate and manage API keys for multiple platforms.
 
 ## Installation
 1. Clone the repository
-2. Install required packages: `pip install -r requirements.txt`
-3. Run the main assistant script: `python src/assistant.py`
+    ```bash
+    git clone https://github.com/your-repo/JARVIS_Assistant.git
+    cd JARVIS_Assistant
+    ```
+
+2. Install required packages
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3. Run the main assistant script
+    ```bash
+    python src/main.py
+    ```
 
 ## Usage
 Activate the assistant and use voice commands to interact with various features.
+
+## Environment Variables
+- **OpenAI API Key**: Set your OpenAI API key as an environment variable.
+    ```bash
+    export OPENAI_API_KEY="your_openai_api_key"
+    ```
+- **Google Maps API Key**: Set your Google Maps API key as an environment variable.
+    ```bash
+    export GOOGLE_MAPS_API_KEY="your_google_maps_api_key"
+    ```
+
+## Contact
+For further assistance, please contact the project maintainers at `support@jarvisassistant.com`.
