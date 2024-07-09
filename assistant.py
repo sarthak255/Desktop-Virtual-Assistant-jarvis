@@ -1,9 +1,11 @@
 # src/assistant.py
 # pip install SpeechRecognition pyttsx3 openai
+
+import os
+import datetime
 import speech_recognition as sr
 import pyttsx3
 import openai
-import os
 
 # Initialize the recognizer and TTS engine
 recognizer = sr.Recognizer()
@@ -43,8 +45,20 @@ def chatgpt_response(prompt):
     )
     return response.choices[0].text.strip()
 
+# Function to greet the user based on time of day
+def greet_user():
+    current_hour = datetime.datetime.now().hour
+    if current_hour < 12:
+        greeting = "Good morning!"
+    elif 12 <= current_hour < 18:
+        greeting = "Good afternoon!"
+    else:
+        greeting = "Good evening!"
+    speak(greeting)
+
 # Main loop
 def main():
+    greet_user()
     while True:
         query = recognize_speech()
         if query:
