@@ -39,7 +39,7 @@ We believe in responsible disclosure of security vulnerabilities. We request tha
 
 ## Contact Information
 For security-related questions or concerns, please contact us at:
-- [security@example.com](mailto:sarthakgoel62@gmail.com)
+- [Contact Us](mailto:sarthakgoel62@gmail.com)
 - [Project Homepage](https://github.com/sarthak255/Desktop-Virtual-Assistant/tree/main)
 
 We appreciate your help in keeping our project secure.
