@@ -1,5 +1,6 @@
 import threading
 import time
+import os
 
 from assistant import main as assistant_main
 from media_control import control_media, change_volume
@@ -24,6 +25,7 @@ from developer_board_programming import program_developer_board
 from telephony_sms import send_sms, make_call, handle_incoming_call
 from chatbot import get_chatbot_response
 from api_key_management import generate_api_key, search_api_key
+from scheduler import add_task, clear_schedule, edit_task
 
 def run_assistant():
     assistant_main()
@@ -105,6 +107,20 @@ def main():
             else:
                 api_key_link = search_api_key(platform)
                 print(f"Found API key link for {platform}: {api_key_link}")
+        elif command == "schedule task":
+            task = input("Enter task: ")
+            task_time = input("Enter time (HH:MM): ")
+            add_task(task, task_time)
+            print(f"Scheduled task '{task}' at {task_time}")
+        elif command == "edit task":
+            old_task = input("Enter old task: ")
+            new_task = input("Enter new task: ")
+            task_time = input("Enter time (HH:MM): ")
+            edit_task(old_task, new_task, task_time)
+            print(f"Edited task '{old_task}' to '{new_task}' at {task_time}")
+        elif command == "clear schedule":
+            clear_schedule()
+            print("Cleared all scheduled tasks")
         elif command == "exit":
             print("Shutting down the assistant...")
             break
