@@ -18,3 +18,11 @@ mediapipe
 dlib
 python-docx
 selenium
+transformers
+torch
+pyserial
+arduino-python
+twilio
+chatterbot
+beautifulsoup4
+mechanize
