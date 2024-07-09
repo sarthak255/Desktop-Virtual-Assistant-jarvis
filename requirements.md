@@ -97,4 +97,4 @@ Activate the assistant and use voice commands to interact with various features.
   **Solution**: Check for any errors in the console and refer to the specific module documentation for troubleshooting steps.
 
 ## Contact
-For further assistance, please contact the project maintainers at `sarthakgoel62@gmail.com`or `yush2004@gmail.com`.
+For further assistance, please contact the project maintainers at `sarthakgoel62@gmail.com` or `yush2004@gmail.com`.
