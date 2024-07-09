@@ -9,9 +9,9 @@
 6. [Weather Forecast](#weather-forecast)
 7. [Tabs Management](#tabs-management)
 8. [System Management and Maintenance](#system-management-and-maintenance)
-9. [Social Media Control](#social-media-control) 
-10. [Gmail Integration](#gmail-integration) 
-11. [Calculator](#calculator) 
+9. [Social Media Control](#social-media-control)
+10. [Gmail Integration](#gmail-integration)
+11. [Calculator](#calculator)
 12. [Study/Homework Helper](#study-homework-helper)
 13. [Web Search/Surfing](#web-search-surfing)
 14. [Camera Security Features](#camera-security-features)
@@ -25,6 +25,8 @@
 22. [Telephony and SMS](#telephony-and-sms)
 23. [Integrated Chatbot](#integrated-chatbot)
 24. [API Key Management](#api-key-management)
+25. [Automatic Greeting](#automatic-greeting)
+26. [Task Scheduling](#task-scheduling)
 
 ## Voice Command System
 Use voice commands to interact with the assistant. For example, say "What's the weather like?" to get the weather forecast.
@@ -97,3 +99,9 @@ JARVIS includes an integrated chatbot for communication. Ask questions or have c
 
 ## API Key Management
 JARVIS can generate API keys for multiple platforms. If unable to generate, JARVIS will search the internet for API keys and provide them along with usage instructions.
+
+## Automatic Greeting
+JARVIS greets the user based on the time of day (morning, afternoon, evening).
+
+## Task Scheduling
+JARVIS can create and edit schedules for performing tasks. Use voice commands or the command line to add, edit, and clear tasks.
