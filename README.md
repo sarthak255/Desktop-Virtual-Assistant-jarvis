@@ -35,8 +35,8 @@ JARVIS is a full-fledged desktop virtual assistant designed to operate on Window
 ## Installation
 1. Clone the repository
     ```bash
-    git clone https://github.com/your-repo/JARVIS_Assistant.git
-    cd JARVIS_Assistant
+    git clone https://github.com/sarthak255/Desktop-Virtual-Assistant-jarvis.git
+    cd Desktop-Virtual-Assistant-jarvis
     ```
 
 2. Install required packages
@@ -63,4 +63,4 @@ Activate the assistant and use voice commands to interact with various features.
     ```
 
 ## Contact
-For further assistance, please contact the project maintainers at `support@jarvisassistant.com`.
+For further assistance, please contact the project maintainers at `sarthakgoel62@gmail.com` or `yushgoel2004@gmail.com`.
