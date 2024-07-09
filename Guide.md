@@ -20,6 +20,11 @@
 17. [Facial and Hand Expression Analysis](#facial-and-hand-expression-analysis)
 18. [Problem Fixer](#problem-fixer)
 19. [Document Creation](#document-creation)
+20. [NLP for User Expression Analysis](#nlp-for-user-expression-analysis)
+21. [Developer Board Programming](#developer-board-programming)
+22. [Telephony and SMS](#telephony-and-sms)
+23. [Integrated Chatbot](#integrated-chatbot)
+24. [API Key Management](#api-key-management)
 
 ## Voice Command System
 Use voice commands to interact with the assistant. For example, say "What's the weather like?" to get the weather forecast.
@@ -77,3 +82,18 @@ Fix common system issues and optimize performance.
 
 ## Document Creation
 Create Word documents using a GUI interface.
+
+## NLP for User Expression Analysis
+JARVIS has a high level of NLP to understand user expressions and react accordingly.
+
+## Developer Board Programming
+JARVIS can help program different developer boards (Arduino, USB, etc.) and languages (C, C++, Java, HTML, Python, React, Node.js, Kotlin, etc.). Simply provide the code and specify the board type.
+
+## Telephony and SMS
+JARVIS can make phone calls, receive/reject calls, make conference calls, send/read SMS, and handle video calls using Twilio. Configure your Twilio account and provide the necessary details.
+
+## Integrated Chatbot
+JARVIS includes an integrated chatbot for communication. Ask questions or have casual conversations with JARVIS.
+
+## API Key Management
+JARVIS can generate API keys for multiple platforms. If unable to generate, JARVIS will search the internet for API keys and provide them along with usage instructions.
