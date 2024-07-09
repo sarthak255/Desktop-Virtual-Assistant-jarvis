@@ -3,7 +3,6 @@
 ![giphy](https://github.com/sarthak255/Desktop-Virtual-Assistant-jarvis/assets/59481936/58f39051-f603-4e1c-88d0-81741ff30f8a)
 
 
-
 ## Overview
 JARVIS is a full-fledged desktop virtual assistant designed to operate on Windows, Linux, and MacOS. It offers a variety of features including voice command, media control, file management, GPS tracking, task management, weather forecasting, and more.
 
