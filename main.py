@@ -1,6 +1,5 @@
 import threading
 import time
-import os
 
 from assistant import main as assistant_main
 from media_control import control_media, change_volume
@@ -26,6 +25,7 @@ from telephony_sms import send_sms, make_call, handle_incoming_call
 from chatbot import get_chatbot_response
 from api_key_management import generate_api_key, search_api_key
 from scheduler import add_task, clear_schedule, edit_task
+from program_creation import create_program
 
 def run_assistant():
     assistant_main()
@@ -121,6 +121,11 @@ def main():
         elif command == "clear schedule":
             clear_schedule()
             print("Cleared all scheduled tasks")
+        elif command == "create program":
+            platform = input("Enter platform (android/windows/linux/mac): ")
+            language = input("Enter programming language: ")
+            project_name = input("Enter project name: ")
+            create_program(platform, language, project_name)
         elif command == "exit":
             print("Shutting down the assistant...")
             break
@@ -130,4 +135,3 @@ def main():
         time.sleep(1)
 
 if __name__ == "__main__":
-    main()
