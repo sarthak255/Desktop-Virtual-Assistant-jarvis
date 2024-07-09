@@ -6,7 +6,7 @@ We take the security of our Desktop Virtual Assistant project seriously. This do
 ## Reporting a Vulnerability
 If you discover a security vulnerability in our project, we encourage you to report it to us responsibly. Please follow these steps:
 
-1. **Contact Us**: Send an email to [security@example.com](mailto:sarthakgoel62@gmail.com) with the details of the vulnerability. Include:
+1. **Contact Us**: Send an email by [click here](mailto:sarthakgoel62@gmail.com) with the details of the vulnerability. Include:
    - A description of the vulnerability
    - Steps to reproduce the issue
    - Potential impact of the vulnerability
