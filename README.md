@@ -67,4 +67,4 @@ Activate the assistant and use voice commands to interact with various features.
     ```
 
 ## Contact
-For further assistance, please contact the project maintainers at `sarthakgoel62@gmail.com` / `yushgoel2004@gmail.com` .
+For further assistance, please contact the project maintainers at `sarthakgoel62@gmail.com` / `yushgoel2004@gmail.com`.
