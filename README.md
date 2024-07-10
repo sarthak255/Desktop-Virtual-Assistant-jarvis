@@ -4,7 +4,7 @@
 
 
 ## Overview
-## Jarvis is a sophisticated desktop virtual assistant designed to streamline your workflow and enhance productivity. Built with advanced natural language processing and artificial intelligence, Jarvis offers a range of features including task management, scheduling, web browsing, and real-time information retrieval. Seamlessly integrate Jarvis into your daily routine for a more organized and efficient work environment.
+JARVIS is a full-fledged desktop virtual assistant designed to operate on Windows, Linux, and MacOS. It offers a variety of features including voice command, media control, file management, GPS tracking, task management, weather forecasting, and more.
 
 ## Features
 - Voice Command System
@@ -33,12 +33,13 @@
 - **API Key Management**: Generate and manage API keys for multiple platforms.
 - **Automatic Greeting**: Greets the user based on the time of day.
 - **Task Scheduling**: Create and edit schedules for performing tasks.
+- **Program Creation**: Create starter code for various platforms (Android, Windows, Linux, Mac) and languages.
 
 ## Installation
 1. Clone the repository
     ```bash
-    git clone https://github.com/sarthak255/Desktop-Virtual-Assistant-jarvis.git
-    cd Desktop-Virtual-Assistant-jarvis
+    git clone https://github.com/your-repo/JARVIS_Assistant.git
+    cd JARVIS_Assistant
     ```
 
 2. Install required packages
@@ -65,4 +66,4 @@ Activate the assistant and use voice commands to interact with various features.
     ```
 
 ## Contact
-For further assistance, please contact the project maintainers at `sarthakgoel62@gmail.com` or `yushgoel2004@gmail.com` .
+For further assistance, please contact the project maintainers at `sarthakgoel62@gmail.com` / `yushgoel2004@gmail.com` .
