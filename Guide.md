@@ -3,6 +3,8 @@
 ![8FLR](https://github.com/sarthak255/Desktop-Virtual-Assistant-jarvis/assets/59481936/3f1167bf-d765-4421-932f-132c3ef3ddbd)
 
 
+# JARVIS Desktop Virtual Assistant - User Guide
+
 ## Table of Contents
 1. [Voice Command System](#voice-command-system)
 2. [Media Control](#media-control)
@@ -30,6 +32,7 @@
 24. [API Key Management](#api-key-management)
 25. [Automatic Greeting](#automatic-greeting)
 26. [Task Scheduling](#task-scheduling)
+27. [Program Creation](#program-creation)
 
 ## Voice Command System
 Use voice commands to interact with the assistant. For example, say "What's the weather like?" to get the weather forecast.
@@ -108,3 +111,6 @@ JARVIS greets the user based on the time of day (morning, afternoon, evening).
 
 ## Task Scheduling
 JARVIS can create and edit schedules for performing tasks. Use voice commands or the command line to add, edit, and clear tasks.
+
+## Program Creation
+JARVIS can create starter code for various platforms (Android, Windows, Linux, Mac) and languages (Java, Kotlin, C#, C, Python, Swift). Use the `create program` command and specify the platform, language, and project name.
