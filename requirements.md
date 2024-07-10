@@ -78,6 +78,7 @@ Activate the assistant and use voice commands to interact with various features.
 5. **API Key Management**: JARVIS can generate API keys for multiple platforms and search the internet for API keys if needed.
 6. **Automatic Greeting**: JARVIS greets the user based on the time of day.
 7. **Task Scheduling**: JARVIS can create and edit schedules for performing tasks.
+8. **Program Creation**: JARVIS can create starter code for various platforms (Android, Windows, Linux, Mac) and languages.
 
 ## Environment Variables
 - **OpenAI API Key**: Set your OpenAI API key as an environment variable.
@@ -98,4 +99,4 @@ Activate the assistant and use voice commands to interact with various features.
   **Solution**: Check for any errors in the console and refer to the specific module documentation for troubleshooting steps.
 
 ## Contact
-For further assistance, please contact the project maintainers at `sarthakgoel62@gmail.com` or `yushgoel2004@gmail.com` .
+For further assistance, please contact the project maintainers at `sarthakgoel62@gmail.com` / `yushgoel2004@gmail.com`.
