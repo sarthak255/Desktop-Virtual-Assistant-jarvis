@@ -26,6 +26,8 @@ from chatbot import get_chatbot_response
 from api_key_management import generate_api_key, search_api_key
 from scheduler import add_task, clear_schedule, edit_task
 from program_creation import create_program
+from image_generation import generate_image
+from 3d_rendering import render_3d_scene
 
 def run_assistant():
     assistant_main()
@@ -126,6 +128,12 @@ def main():
             language = input("Enter programming language: ")
             project_name = input("Enter project name: ")
             create_program(platform, language, project_name)
+        elif command == "generate image":
+            generate_image()
+        elif command == "render 3d":
+            scene_file = input("Enter path to Blender scene file: ")
+            output_file = input("Enter output file name: ")
+            render_3d_scene(scene_file, output_file)
         elif command == "exit":
             print("Shutting down the assistant...")
             break
