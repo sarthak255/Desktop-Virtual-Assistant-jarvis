@@ -27,3 +27,4 @@ chatterbot
 beautifulsoup4
 mechanize
 schedule
+tensorflow-gpu
