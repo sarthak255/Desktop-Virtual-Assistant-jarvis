@@ -34,12 +34,13 @@ JARVIS is a full-fledged desktop virtual assistant designed to operate on Window
 - **Automatic Greeting**: Greets the user based on the time of day.
 - **Task Scheduling**: Create and edit schedules for performing tasks.
 - **Program Creation**: Create starter code for various platforms (Android, Windows, Linux, Mac) and languages.
+- **GPU Utilization for Tasks**: Use integrated and dedicated GPUs for performing tasks such as 3D modeling, rendering, and image generation.
 
 ## Installation
 1. Clone the repository
     ```bash
-    git clone https://github.com/your-repo/JARVIS_Assistant.git
-    cd JARVIS_Assistant
+    git clone https://github.com/sarthak255/Desktop-Virtual-Assistant-jarvis.git
+    cd Desktop-Virtual-Assistant-jarvis
     ```
 
 2. Install required packages
