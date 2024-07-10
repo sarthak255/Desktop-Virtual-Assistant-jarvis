@@ -36,6 +36,7 @@ This document outlines the software, hardware, and package requirements for the 
 - **Integrated Chatbot**: `chatterbot`
 - **API Key Management**: `beautifulsoup4`, `mechanize`
 - **Task Scheduling**: `schedule`
+- **GPU Utilization**: `tensorflow-gpu`
 
 ## Hardware Requirements
 ### Minimum Requirements
@@ -43,18 +44,20 @@ This document outlines the software, hardware, and package requirements for the 
 - **RAM**: 4GB
 - **Storage**: 500MB available space
 - **Camera**: Integrated or external webcam for facial recognition and security features
+- **GPU**: Integrated GPU
 
 ### Recommended Requirements
 - **CPU**: Quad-core processor
 - **RAM**: 8GB or more
 - **Storage**: 1GB available space
 - **Camera**: High-definition webcam
+- **GPU**: Dedicated GPU with CUDA support (for tasks like 3D modeling, rendering, and image generation)
 
 ## Installation Instructions
 1. **Clone the Repository**
     ```bash
-    git clone https://github.com/sarthak255/Desktop-Virtual-Assistant-jarvis.git
-    cd Desktop-Virtual-Assistant-jarvis
+    git clone https://github.com/your-repo/JARVIS_Assistant.git
+    cd JARVIS_Assistant
     ```
 
 2. **Install Required Packages**
@@ -79,6 +82,7 @@ Activate the assistant and use voice commands to interact with various features.
 6. **Automatic Greeting**: JARVIS greets the user based on the time of day.
 7. **Task Scheduling**: JARVIS can create and edit schedules for performing tasks.
 8. **Program Creation**: JARVIS can create starter code for various platforms (Android, Windows, Linux, Mac) and languages.
+9. **GPU Utilization for Tasks**: JARVIS can use integrated and dedicated GPUs for performing tasks such as 3D modeling, rendering, and image generation.
 
 ## Environment Variables
 - **OpenAI API Key**: Set your OpenAI API key as an environment variable.
@@ -99,4 +103,4 @@ Activate the assistant and use voice commands to interact with various features.
   **Solution**: Check for any errors in the console and refer to the specific module documentation for troubleshooting steps.
 
 ## Contact
-For further assistance, please contact the project maintainers at `sarthakgoel62@gmail.com` / `yushgoel2004@gmail.com`.
+For further assistance, please contact the project maintainers at `sarthakgoel62@gmail.com` / `yushgoel2004@gmail.com` .
