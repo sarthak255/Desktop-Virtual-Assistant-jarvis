@@ -31,6 +31,7 @@
 25. [Automatic Greeting](#automatic-greeting)
 26. [Task Scheduling](#task-scheduling)
 27. [Program Creation](#program-creation)
+28. [GPU Utilization for Tasks](#gpu-utilization-for-tasks)
 
 ## Voice Command System
 Use voice commands to interact with the assistant. For example, say "What's the weather like?" to get the weather forecast.
@@ -112,3 +113,6 @@ JARVIS can create and edit schedules for performing tasks. Use voice commands or
 
 ## Program Creation
 JARVIS can create starter code for various platforms (Android, Windows, Linux, Mac) and languages (Java, Kotlin, C#, C, Python, Swift). Use the `create program` command and specify the platform, language, and project name.
+
+## GPU Utilization for Tasks
+JARVIS can leverage integrated and dedicated GPUs for performing tasks such as 3D modeling, rendering, and image generation. Use the `generate image` command to generate images using TensorFlow and the `render 3d` command to render 3D scenes using Blender.
