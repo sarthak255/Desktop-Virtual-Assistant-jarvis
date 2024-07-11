@@ -32,6 +32,17 @@
 26. [Task Scheduling](#task-scheduling)
 27. [Program Creation](#program-creation)
 28. [GPU Utilization for Tasks](#gpu-utilization-for-tasks)
+29. [End-to-End Encryption](#end-to-end-encryption)
+30. [Advanced Scheduling](#advanced-scheduling)
+31. [Project Management Integration](#project-management-integration)
+32. [Content Aware Responses](#content-aware-responses)
+33. [Multi-Term Conversations](#multi-term-conversations)
+34. [Data Anonymization](#data-anonymization)
+35. [Semantic Search](#semantic-search)
+36. [Real-time Data Fetching](#real-time-data-fetching)
+37. [Visual Recognition](#visual-recognition)
+38. [Augmented Reality](#augmented-reality)
+39. [Screen Reader Integration](#screen-reader-integration)
 
 ## Voice Command System
 Use voice commands to interact with the assistant. For example, say "What's the weather like?" to get the weather forecast.
@@ -116,3 +127,36 @@ JARVIS can create starter code for various platforms (Android, Windows, Linux, M
 
 ## GPU Utilization for Tasks
 JARVIS can leverage integrated and dedicated GPUs for performing tasks such as 3D modeling, rendering, and image generation. Use the `generate image` command to generate images using TensorFlow and the `render 3d` command to render 3D scenes using Blender.
+
+## End-to-End Encryption
+JARVIS can encrypt and decrypt data securely using the `cryptography` package. Use the `encrypt data` and `decrypt data` commands to encrypt and decrypt sensitive information.
+
+## Advanced Scheduling
+JARVIS can schedule tasks with start and end times. Use the `advanced schedule task` command to schedule a task and specify the start and end times.
+
+## Project Management Integration
+JARVIS can integrate with Trello for project management. Use the `project management` command to create a new board and add cards to lists.
+
+## Content Aware Responses
+JARVIS can generate content-aware responses using the OpenAI API. Use the `content aware response` command to get a response based on the provided prompt.
+
+## Multi-Term Conversations
+JARVIS can maintain multi-term conversations using the OpenAI API. Use the `multi-term conversation` command to continue a conversation based on the provided context.
+
+## Data Anonymization
+JARVIS can anonymize personal data using the `faker` package. Use the `anonymize data` command to anonymize names, addresses, emails, and phone numbers.
+
+## Semantic Search
+JARVIS can perform semantic search using the `sentence-transformers` package. Use the `semantic search` command to search a corpus of text based on a query.
+
+## Real-time Data Fetching
+JARVIS can fetch real-time data such as weather information. Use the `fetch weather` command to get the current weather for a specified location.
+
+## Visual Recognition
+JARVIS can recognize faces in images using OpenCV. Use the `visual recognition` command to detect and display faces in an image.
+
+## Augmented Reality
+JARVIS can apply augmented reality effects using OpenCV. Use the `augmented reality` command to overlay images onto a background image.
+
+## Screen Reader Integration
+JARVIS can integrate a screen reader for accessibility using the `pyttsx3` package. Use the `screen reader` command to read text aloud.
