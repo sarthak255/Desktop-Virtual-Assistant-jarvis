@@ -98,6 +98,7 @@ Activate the assistant and use voice commands to interact with various features.
 18. **Visual Recognition**: Recognize faces in images.
 19. **Augmented Reality**: Apply augmented reality effects.
 20. **Screen Reader Integration**: Integrate a screen reader for accessibility.
+21. **Secure Personal Storage**: 25GB password-protected storage for confidential data.
 
 ## Environment Variables
 - **OpenAI API Key**: Set your OpenAI API key as an environment variable.
