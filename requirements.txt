@@ -28,3 +28,7 @@ beautifulsoup4
 mechanize
 schedule
 tensorflow-gpu
+cryptography
+py-trello
+faker
+sentence-transformers
