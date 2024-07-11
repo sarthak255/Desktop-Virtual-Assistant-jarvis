@@ -43,6 +43,7 @@
 37. [Visual Recognition](#visual-recognition)
 38. [Augmented Reality](#augmented-reality)
 39. [Screen Reader Integration](#screen-reader-integration)
+40. [Secure Personal Storage](#secure-personal-storage)
 
 ## Voice Command System
 Use voice commands to interact with the assistant. For example, say "What's the weather like?" to get the weather forecast.
@@ -160,3 +161,6 @@ JARVIS can apply augmented reality effects using OpenCV. Use the `augmented real
 
 ## Screen Reader Integration
 JARVIS can integrate a screen reader for accessibility using the `pyttsx3` package. Use the `screen reader` command to read text aloud.
+
+## Secure Personal Storage
+JARVIS provides 25GB of password-protected storage for confidential data. Use the `initialize storage`, `store encrypted data`, and `retrieve encrypted data` commands to manage your personal storage.
