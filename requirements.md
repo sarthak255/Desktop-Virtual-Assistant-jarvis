@@ -37,6 +37,10 @@ This document outlines the software, hardware, and package requirements for the 
 - **API Key Management**: `beautifulsoup4`, `mechanize`
 - **Task Scheduling**: `schedule`
 - **GPU Utilization**: `tensorflow-gpu`
+- **End-to-End Encryption**: `cryptography`
+- **Project Management Integration**: `py-trello`
+- **Data Anonymization**: `faker`
+- **Semantic Search**: `sentence-transformers`
 
 ## Hardware Requirements
 ### Minimum Requirements
@@ -83,6 +87,17 @@ Activate the assistant and use voice commands to interact with various features.
 7. **Task Scheduling**: JARVIS can create and edit schedules for performing tasks.
 8. **Program Creation**: JARVIS can create starter code for various platforms (Android, Windows, Linux, Mac) and languages.
 9. **GPU Utilization for Tasks**: JARVIS can use integrated and dedicated GPUs for performing tasks such as 3D modeling, rendering, and image generation.
+10. **End-to-End Encryption**: Encrypt and decrypt data securely.
+11. **Advanced Scheduling**: Schedule tasks with start and end times.
+12. **Project Management Integration**: Integrate with Trello for project management.
+13. **Content Aware Responses**: Generate content-aware responses using OpenAI API.
+14. **Multi-Term Conversations**: Maintain multi-term conversations.
+15. **Data Anonymization**: Anonymize personal data.
+16. **Semantic Search**: Perform semantic search using sentence transformers.
+17. **Real-time Data Fetching**: Fetch real-time data such as weather information.
+18. **Visual Recognition**: Recognize faces in images.
+19. **Augmented Reality**: Apply augmented reality effects.
+20. **Screen Reader Integration**: Integrate a screen reader for accessibility.
 
 ## Environment Variables
 - **OpenAI API Key**: Set your OpenAI API key as an environment variable.
@@ -103,4 +118,4 @@ Activate the assistant and use voice commands to interact with various features.
   **Solution**: Check for any errors in the console and refer to the specific module documentation for troubleshooting steps.
 
 ## Contact
-For further assistance, please contact the project maintainers at `sarthakgoel62@gmail.com` / `yushgoel2004@gmail.com` .
+For further assistance, please contact the project maintainers at `sarthakgoel62@gmail.com` / `yushgoel2004@gmail.com`.
