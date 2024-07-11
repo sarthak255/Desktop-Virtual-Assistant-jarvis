@@ -1,5 +1,6 @@
 import threading
 import time
+import getpass
 
 from assistant import main as assistant_main
 from media_control import control_media, change_volume
@@ -39,6 +40,7 @@ from real_time_data_fetching import fetch_weather_data
 from visual_recognition import recognize_faces
 from augmented_reality import augmented_reality_effect
 from screen_reader import read_screen_text
+from storage import initialize_storage, store_encrypted_data, retrieve_encrypted_data
 
 def run_assistant():
     assistant_main()
@@ -215,6 +217,21 @@ def main():
         elif command == "screen reader":
             text = input("Enter text to read: ")
             read_screen_text(text)
+        elif command == "initialize storage":
+            password = getpass.getpass("Set storage password: ")
+            initialize_storage(password)
+            print("Storage initialized.")
+        elif command == "store encrypted data":
+            filename = input("Enter filename: ")
+            data = input("Enter data to store: ")
+            password = getpass.getpass("Enter storage password: ")
+            store_encrypted_data(filename, data, password)
+            print("Data stored securely.")
+        elif command == "retrieve encrypted data":
+            filename = input("Enter filename: ")
+            password = getpass.getpass("Enter storage password: ")
+            data = retrieve_encrypted_data(filename, password)
+            print(f"Retrieved Data: {data}")
         elif command == "exit":
             print("Shutting down the assistant...")
             break
