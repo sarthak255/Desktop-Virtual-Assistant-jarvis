@@ -35,6 +35,17 @@ JARVIS is a full-fledged desktop virtual assistant designed to operate on Window
 - **Task Scheduling**: Create and edit schedules for performing tasks.
 - **Program Creation**: Create starter code for various platforms (Android, Windows, Linux, Mac) and languages.
 - **GPU Utilization for Tasks**: Use integrated and dedicated GPUs for performing tasks such as 3D modeling, rendering, and image generation.
+- **End-to-End Encryption**: Encrypt and decrypt data securely.
+- **Advanced Scheduling**: Schedule tasks with start and end times.
+- **Project Management Integration**: Integrate with Trello for project management.
+- **Content Aware Responses**: Generate content-aware responses using OpenAI API.
+- **Multi-Term Conversations**: Maintain multi-term conversations.
+- **Data Anonymization**: Anonymize personal data.
+- **Semantic Search**: Perform semantic search using sentence transformers.
+- **Real-time Data Fetching**: Fetch real-time data such as weather information.
+- **Visual Recognition**: Recognize faces in images.
+- **Augmented Reality**: Apply augmented reality effects.
+- **Screen Reader Integration**: Integrate a screen reader for accessibility.
 
 ## Installation
 1. Clone the repository
