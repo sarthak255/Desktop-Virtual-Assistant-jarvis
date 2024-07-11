@@ -46,6 +46,7 @@ JARVIS is a full-fledged desktop virtual assistant designed to operate on Window
 - **Visual Recognition**: Recognize faces in images.
 - **Augmented Reality**: Apply augmented reality effects.
 - **Screen Reader Integration**: Integrate a screen reader for accessibility.
+- **Secure Personal Storage**: 25GB password-protected storage for confidential data
 
 ## Installation
 1. Clone the repository
